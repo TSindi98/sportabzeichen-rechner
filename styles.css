@@ -408,6 +408,17 @@ main.container { padding-top: 24px; padding-bottom: 140px; }
 .detail-tips { padding-left: 20px; margin: 0; }
 .detail-tips li { margin: 6px 0; }
 
+.requirements-sub {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: #fef2f2;
+  border-left: 4px solid var(--accent);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin: 0 0 16px;
+}
+
 /* Detail medals (for numeric disciplines) */
 .detail-medals {
   display: grid;

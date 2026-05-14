@@ -406,12 +406,17 @@
     const titleMain = escapeHtml(discipline.label);
     const titleSub  = showVariantInTitle ? `<span class="detail-title-sub">${escapeHtml(data.variant)}</span>` : "";
 
-    const variantNote = (data && data.variant && !showVariantInTitle)
-      ? `<p class="detail-meta"><strong>Aufgabe für dein Alter:</strong> ${escapeHtml(data.variant)}${data.note ? " · " + escapeHtml(data.note) : ""}</p>`
-      : (data && data.note ? `<p class="detail-meta">${escapeHtml(data.note)}</p>` : "");
-
     const contextHtml = hasContext
       ? `<p class="detail-meta">${escapeHtml(DATA.genders.find(g => g.id === state.gender).label)} · ${escapeHtml(DATA.ageGroups.find(a => a.id === state.age).label)}</p>`
+      : "";
+
+    // Variant: bei skill steht es im Titel, sonst unter "Anforderungen für dich".
+    // variantByGender hat Vorrang, wenn Geschlecht gewählt ist.
+    const variantForUser = data
+      ? ((data.variantByGender && state.gender && data.variantByGender[state.gender]) || data.variant)
+      : null;
+    const requirementsSub = (variantForUser && !showVariantInTitle)
+      ? `<p class="requirements-sub">${escapeHtml(variantForUser)}${data.note ? " · " + escapeHtml(data.note) : ""}</p>`
       : "";
 
     const crumbVariant = showVariantInTitle ? `<span class="breadcrumb-sep">›</span><span>${escapeHtml(data.variant)}</span>` : "";
@@ -429,7 +434,6 @@
 
         <h1 class="detail-title">${titleMain}${titleSub}</h1>
         ${contextHtml}
-        ${variantNote}
 
         ${resolved.short ? `<p class="detail-short">${escapeHtml(resolved.short)}</p>` : ""}
 
@@ -446,7 +450,8 @@
         ` : ""}
 
         <div class="detail-section">
-          <h3>Anforderungen</h3>
+          <h3>Anforderungen für dich</h3>
+          ${requirementsSub}
           ${medalsHtml}
         </div>
 
