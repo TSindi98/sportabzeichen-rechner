@@ -389,14 +389,32 @@
       `;
     }
 
-    const tipsHtml = discipline.tips && discipline.tips.length
-      ? `<ul class="detail-tips">${discipline.tips.map(t => `<li>${escapeHtml(t)}</li>`).join("")}</ul>`
+    // Altersspezifische Felder haben Vorrang vor disziplin-weiten Defaults
+    const resolved = {
+      short:     (data && data.short)     || discipline.short     || "",
+      howTo:     (data && data.howTo)     || discipline.howTo     || "",
+      materials: (data && data.materials) || discipline.materials || "",
+      tips:      (data && data.tips)      || discipline.tips      || []
+    };
+
+    const tipsHtml = resolved.tips && resolved.tips.length
+      ? `<ul class="detail-tips">${resolved.tips.map(t => `<li>${escapeHtml(t)}</li>`).join("")}</ul>`
       : "";
 
-    const variantNote = (data && data.variant) ? `<p class="detail-meta"><strong>Aufgabe für dein Alter:</strong> ${escapeHtml(data.variant)}${data.note ? " · " + escapeHtml(data.note) : ""}</p>` : "";
+    // Titel: bei skill-Disziplinen mit konkreter Übung diese als Untertitel zeigen
+    const showVariantInTitle = !!(data && data.variant && discipline.type === "skill");
+    const titleMain = escapeHtml(discipline.label);
+    const titleSub  = showVariantInTitle ? `<span class="detail-title-sub">${escapeHtml(data.variant)}</span>` : "";
+
+    const variantNote = (data && data.variant && !showVariantInTitle)
+      ? `<p class="detail-meta"><strong>Aufgabe für dein Alter:</strong> ${escapeHtml(data.variant)}${data.note ? " · " + escapeHtml(data.note) : ""}</p>`
+      : (data && data.note ? `<p class="detail-meta">${escapeHtml(data.note)}</p>` : "");
+
     const contextHtml = hasContext
       ? `<p class="detail-meta">${escapeHtml(DATA.genders.find(g => g.id === state.gender).label)} · ${escapeHtml(DATA.ageGroups.find(a => a.id === state.age).label)}</p>`
       : "";
+
+    const crumbVariant = showVariantInTitle ? `<span class="breadcrumb-sep">›</span><span>${escapeHtml(data.variant)}</span>` : "";
 
     app.innerHTML = `
       <article class="detail-page">
@@ -406,23 +424,24 @@
           <span>${escapeHtml(group.icon)} ${escapeHtml(group.label)}</span>
           <span class="breadcrumb-sep">›</span>
           <span>${escapeHtml(discipline.label)}</span>
+          ${crumbVariant}
         </nav>
 
-        <h1 class="detail-title">${escapeHtml(discipline.label)}</h1>
+        <h1 class="detail-title">${titleMain}${titleSub}</h1>
         ${contextHtml}
         ${variantNote}
 
-        ${discipline.short ? `<p class="detail-short">${escapeHtml(discipline.short)}</p>` : ""}
+        ${resolved.short ? `<p class="detail-short">${escapeHtml(resolved.short)}</p>` : ""}
 
         <div class="detail-section">
           <h3>Wie sieht die Disziplin aus?</h3>
-          <p>${escapeHtml(discipline.howTo || "Beschreibung folgt.")}</p>
+          <p>${escapeHtml(resolved.howTo || "Beschreibung folgt.")}</p>
         </div>
 
-        ${discipline.materials ? `
+        ${resolved.materials ? `
           <div class="detail-section">
             <h3>Was du brauchst</h3>
-            <p>${escapeHtml(discipline.materials)}</p>
+            <p>${escapeHtml(resolved.materials)}</p>
           </div>
         ` : ""}
 

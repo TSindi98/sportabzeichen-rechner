@@ -186,6 +186,14 @@ const DATA = {
           values: {
             "10-11": {
               variant: "Stützschwingen am Parallelbarren",
+              short: "Stütze dich auf dem Parallelbarren und schwinge mehrmals vor und zurück.",
+              howTo: "Du stützt dich mit den Händen auf den beiden Holmen eines Parallelbarrens, im Vierfüßlerstand vorlings. Aus dieser Position schwingst du mit gestreckten Armen mehrmals vor und zurück. Für die Gold-Anforderung musst du im Vorschwung über dem Holm grätschen und die Beine wieder schließen.",
+              materials: "Parallelbarren, Turnmatten zur Absicherung",
+              tips: [
+                "Halte die Arme dauerhaft gestreckt – gebogene Arme werden bei der Bewertung nicht akzeptiert.",
+                "Übe den Vierfüßlerstand vorlings und rücklings sicher, bevor du das Schwingen dazu nimmst.",
+                "Lass dich von einer erfahrenen Person sichern."
+              ],
               bronze: "Aus dem Vierfüßlerstand vorlings auf dem Barren zweimal vor- und zurückschwingen. Nach dem dritten Vorschwung Landung im Vierfüßlerstand rücklings.",
               silber: "Viermal vor- und zurückschwingen. Aufgabe endet im Vierfüßlerstand vorlings.",
               gold: "Viermal vor- und zurückschwingen mit Grätschen und Schließen der Beine über dem Holm im Vorschwung.",
@@ -196,18 +204,42 @@ const DATA = {
             },
             "12-13": {
               variant: "Klimmzüge am Reck",
+              short: "Ziehe dich am Reck mehrmals hoch, bis dein Kinn über die Stange kommt.",
+              howTo: "Du hängst mit gestreckten Armen am Reck und ziehst dich so weit hoch, dass dein Kinn deutlich über die Stange kommt. Anschließend lässt du dich kontrolliert wieder herunter. Die Griffposition (Kammgriff = Handflächen zum Gesicht, oder Ristgriff = Handrücken zum Körper) darfst du selbst wählen.",
+              materials: "Reck (so hoch, dass du frei hängst), Turnmatten zur Absicherung",
+              tips: [
+                "Wähle den Griff, mit dem du dich am stärksten fühlst — meistens der Kammgriff.",
+                "Spann den Bauch beim Hochziehen an, dann pendelst du weniger.",
+                "Bei Gold musst du zwischen den Klimmzügen die Arme komplett aushängen — übe das Aushängen separat."
+              ],
               bronze: "Ein Klimmzug aus dem Hang mit deutlichem Ziehen des Kinns über die Stange.",
               silber: "Drei Klimmzüge aus dem Hang.",
               gold: "Drei Klimmzüge, dazwischen jeweils komplett aushängen (Arme zwischen den Klimmzügen ganz gestreckt)."
             },
             "14-15": {
-              variant: "Handstand (3 Matten, Wand, kleiner Kasten)",
+              variant: "Handstand",
+              short: "Schwinge dich in den Handstand und halte die Position kurz.",
+              howTo: "Du schwingst dich auf den Händen in die Vertikale (Kopf nach unten, Beine nach oben). Bei Bronze stehst du vor einer Wand (ca. 30 cm Abstand, ohne Wandkontakt). Bei Silber turnst du frei auf der Matte mit Sicherung durch zwei Personen. Bei Gold steht eine Helfer:in auf einem kleinen Kasten und klemmt eine Hand zwischen deine Füße — du musst die Position 2 Sekunden halten.",
+              materials: "3 Turnmatten, Wand (für Bronze), 1 kleiner Kasten (für Gold)",
+              tips: [
+                "Spann den ganzen Körper an – Beine, Po, Bauch –, dann fällst du nicht so schnell um.",
+                "Übe zuerst mit Wandkontakt, bis du dich sicher fühlst.",
+                "Bei der freien Variante (Silber/Gold) immer mit Sicherung durch zwei Personen."
+              ],
               bronze: "Aufschwingen Handstand vor einer Wand (ca. 30 cm Abstand). Wand darf nicht berührt werden. Position kurz erreichen.",
               silber: "Aufschwingen Handstand auf der Matte, ggf. Sicherung durch zwei Personen.",
               gold: "Handstand auf der Matte, Helfer:in steht auf kleinem Kasten und klemmt eine Hand zwischen die Füße. Position 2 Sekunden halten."
             },
             "16-17": {
-              variant: "Hüft-Aufschwung (Sprossenwand / Reck)",
+              variant: "Hüft-Aufschwung",
+              short: "Schwinge dich aus dem Hang über die Reckstange in den Stütz.",
+              howTo: "Du schwingst dich aus dem Hang am Reck mit Schwung um die Stange, sodass du im Stütz oberhalb der Stange landest. Bei Bronze reicht es, dreimal die geschlossenen, gehockten Beine bis zum Rumpf anzuheben (mind. bis Waagerechte). Bei Silber schwingst du am kopfhohen Reck mit Kasten als Geländehilfe auf. Bei Gold am schulterhohen Reck ohne Hilfe.",
+              materials: "Sprossenwand (Bronze) oder Reck in verschiedenen Höhen, kleiner Kasten als Geländehilfe, Turnmatten",
+              tips: [
+                "Schwing die Beine kraftvoll nach oben — die Bewegung kommt aus der Hüfte.",
+                "Halte die Arme gebeugt, sodass dein Bauch nah an der Stange bleibt.",
+                "Trainiere zuerst die Aufschwung-Bewegung mit Hilfestellung durch eine Trainer:in."
+              ],
               bronze: "An der Sprossenwand oder am sprunghohen Reck dreimal die geschlossenen, gehockten Beine bis zum Rumpf anheben (mindestens bis Oberschenkel waagerecht).",
               silber: "Hüft-Aufschwung am kopfhohen Reck mit kleinem Kasten als Geländehilfe.",
               gold: "Hüft-Aufschwung am schulterhohen Reck.",
@@ -304,7 +336,15 @@ const DATA = {
           materials: "Je nach Alter: Sprungbrett, Weichbodenmatten, Turnmatten, Sprungtisch",
           values: {
             "10-11": {
-              variant: "Sprungrolle (Weichbodenmatten + Sprungbrett)",
+              variant: "Sprungrolle",
+              short: "Springe vom Sprungbrett ab und rolle dich auf Weichbodenmatten ab.",
+              howTo: "Du läufst an, springst beidbeinig vom Sprungbrett ab und machst eine Rolle vorwärts in der Luft auf einen Stapel Weichbodenmatten. Je höher der Stapel (2/3/4 Matten), desto höher die Stufe.",
+              materials: "Sprungbrett, 4 Weichbodenmatten (ca. 30 cm hoch pro Matte) — alternativ Bänke/Kästen als Unterbau",
+              tips: [
+                "Rolle den Kopf rechtzeitig ein — der Nacken darf nicht hart aufkommen.",
+                "Anlauf nicht zu schnell — Kontrolle ist wichtiger als Geschwindigkeit.",
+                "Greife nicht zu früh nach vorne — der Stütz kommt erst nach dem Absprung."
+              ],
               bronze: "Anlauf, beidbeiniger Absprung vom Sprungbrett, Sprungrolle auf zwei übereinander gelegte Weichbodenmatten mit Landung in den Stand.",
               silber: "Sprungrolle auf drei übereinander gelegte Weichbodenmatten.",
               gold: "Sprungrolle auf vier übereinander gelegte Weichbodenmatten.",
@@ -314,7 +354,15 @@ const DATA = {
               ]
             },
             "12-13": {
-              variant: "Handstütz-Sprungüberschlag (4 Weichbodenmatten)",
+              variant: "Handstütz-Sprungüberschlag (Weichbodenmatten)",
+              short: "Springe in die Handstützposition und fall rückwärts auf eine Matte.",
+              howTo: "Du läufst an, springst beidbeinig am hinteren Ende der quer gelegten Matten ab und kommst in die Handstützposition. Die Beine schwingen über deinen Körper, du fällst entweder in Rückenlage (Bronze) oder stehst kontrolliert auf der längs gelegten Matte auf (Gold).",
+              materials: "4 Weichbodenmatten (2 quer, 2 längs)",
+              tips: [
+                "Die Hüfte muss durchgestreckt sein — stell dir vor, du fällst gerade nach hinten.",
+                "Drücke dich mit den Händen aktiv ab, dann fliegst du höher.",
+                "Sicherheitsstellung durch zwei Personen, eine an jeder Seite."
+              ],
               bronze: "Anlauf, Absprung am hinteren Ende der quer gelegten Matten, in die Handstützposition und umfallen in Rückenlage auf längs gelegte Matten.",
               silber: "Wie Bronze, zusätzlich mit Abdruck aus dem Handstütz.",
               gold: "Mit Abdruck Aufstehen in den Stand auf der längs gelegten Weichbodenmatte.",
@@ -324,7 +372,15 @@ const DATA = {
               ]
             },
             "14-15": {
-              variant: "Grätsch(winkel)sprung (Sprungbrett, 4 Matten)",
+              variant: "Grätsch(winkel)sprung",
+              short: "Springe vom Sprungbrett ab und mache in der Luft eine Grätsche.",
+              howTo: "Du läufst an, springst beidbeinig vom Sprungbrett ab und spreizt in der Luft die Beine seitlich (Grätsche). Bei Gold zeigst du einen Hüftwinkel — die Knie zeigen nach oben, nicht nur seitlich. Anschließend landest du auf doppelt gelegten Turnmatten in stabilem Stand.",
+              materials: "Sprungbrett, 4 doppelt gelegte Turnmatten",
+              tips: [
+                "Hol Schwung mit den Armen — beim Absprung ziehst du sie über den Kopf.",
+                "Die Grätsche muss in der Luft passieren, nicht beim Aufkommen.",
+                "Für die Gold-Variante: Hüftwinkel = Knie nach oben, nicht nur seitlich gespreizt."
+              ],
               bronze: "Anlauf, Absprung vom Sprungbrett, Grätschsprung mit beliebiger Landung auf zwei doppelt gelegten Turnmatten.",
               silber: "Grätschsprung mit Landung in den ruhigen Stand.",
               gold: "Grätschwinkelsprung (deutlicher Hüftwinkel, Knie zeigen nach oben), Landung in ruhigen Stand.",
@@ -336,6 +392,14 @@ const DATA = {
             },
             "16-17": {
               variant: "Handstütz-Sprungüberschlag (Sprungtisch)",
+              short: "Springe über den Sprungtisch — mit oder ohne Handstütz.",
+              howTo: "Du läufst an und springst vom Sprungbrett ab. Bei Bronze überspringst du den Sprungtisch ohne ihn zu berühren. Bei Silber stützt du dich mit gestreckten Armen darauf ab. Bei Gold drückst du dich vom Sprungtisch ab und landest in Rückenlage auf einem Mattenberg dahinter.",
+              materials: "Sprungbrett, Sprungtisch (1,25 m), 3 viergeteilte Kästen, 2 Weichbodenmatten (ca. 30 cm hoch)",
+              tips: [
+                "Beim Anlauf muss das Sprungbrett etwa hüfthoch unter dem Absprung liegen.",
+                "Vor dem ersten Versuch am Sprungtisch — übe erst die Bronze-Variante (Überspringen ohne Berührung).",
+                "Sicherheitsstellung: eine Person steht seitlich am Sprungtisch."
+              ],
               bronze: "Sprungtisch wird mit Mattenberg gleichhoch abgesichert. Anlauf und Absprung ohne Aufsatz der Hände auf den Sprungtisch.",
               silber: "Sprung mit Stütz der Hände (leicht ausgedreht) und gestreckten Armen auf den Sprungtisch.",
               gold: "Stützaufnahme, Abdruck und Landung in Rückenlage auf dem Weichbodenmattenberg.",
@@ -452,24 +516,56 @@ const DATA = {
           values: {
             "10-11": {
               variant: "Schwingen an den Ringen",
+              short: "Hänge an den Ringen und schwinge mehrmals vor und zurück.",
+              howTo: "Du steigst von einem kleinen Kasten ab und greifst die hängenden Ringe mit gestreckten Armen. Du schwingst vor und zurück. Je nach Stufe musst du dich am Boden abstoßen — bei Gold sogar mit deutlichem Höhengewinn.",
+              materials: "Schwingende Ringe (reichhoch aufgehängt), kleiner Kasten, Turnmatten zur Absicherung",
+              tips: [
+                "Halte die Arme während des Schwingens gestreckt.",
+                "Für Silber/Gold: rhythmisch zwei Mal vom Boden abstoßen — wie beim Schaukeln.",
+                "Die Landung ist wichtig — am Ende des Rückpendelns die Arme strecken und sicher landen."
+              ],
               bronze: "Aus dem Stand auf kleinem Kasten Arme strecken, abspringen und anziehen. Vor- und zurückpendeln, am Ende des Rückpendelns Arme strecken und landen.",
               silber: "Drei Vor- und Rückschwünge an den Ringen mit rhythmischem Abstoßen am Boden (zwei Kontakte je Vor- und Rückschwung).",
               gold: "Wie Silber, zusätzlich mit deutlichem Höhengewinn."
             },
             "12-13": {
               variant: "Rad (Handstützüberschlag seitwärts)",
+              short: "Schlag ein Rad seitwärts mit gestreckten Beinen.",
+              howTo: "Du machst einen Handstützüberschlag seitwärts — also ein „Rad\". Die Hände setzen nacheinander auf, die Beine schwingen seitlich über den Kopf, du landest wieder im Stand. Bei Gold musst du in einem 30 cm breiten Korridor bleiben (also möglichst gerade!).",
+              materials: "Eine hochgestellte Weichbodenmatte (Bronze), Turnmatten, evtl. Kreide für den Korridor (Gold)",
+              tips: [
+                "Schau auf die Hände, nicht auf den Boden.",
+                "Strecke die Beine — gebogene Knie sehen unsicher aus.",
+                "Übe das Rad zuerst aus dem Stand, nicht mit Anlauf."
+              ],
               bronze: "Aus dem Aufschwingen Rad vorlings vor einer hochgestellten Weichbodenmatte. Abstand zur Matte im Handaufsatz ca. 30 cm.",
               silber: "Rad mit Landung gegen die Bewegungsrichtung.",
               gold: "Rad in einem durch Kreidestriche markierten Korridor von 30 cm Breite."
             },
             "14-15": {
-              variant: "Rolle (4 kleine Kästen, Turnmatten)",
+              variant: "Rolle",
+              short: "Rolle vorwärts oder rückwärts in einer Kastengasse.",
+              howTo: "Bei Bronze: Rolle vorwärts aus der Bauchlage auf einem kleinen Kasten durch eine Kastengasse, Aufstehen über den vierten Kasten ohne Stütz. Bei Silber/Gold: Rolle rückwärts aus dem Strecksitz, Landung in Hockposition auf einem Turnmattenberg.",
+              materials: "4 kleine Kästen, Turnmatten (Mattenberg für die Landung)",
+              tips: [
+                "Rolle gerade, nicht schräg — sonst kommst du aus der Kastengasse raus.",
+                "Bei der Rückwärtsrolle: die Hände neben den Schultern aufsetzen und kräftig abdrücken.",
+                "Den Kopf einrollen, der Nacken darf nicht hart aufkommen."
+              ],
               bronze: "Aus der Bauchlage auf einem kleinen Kasten Rolle vorwärts in der Kastengasse mit richtigem Handaufsatz und Aufstehen über einen vierten Kasten – ohne Abstützen der Hände.",
               silber: "Aus dem Strecksitz Rolle rückwärts in der Kastengasse, Landung in Hockposition auf einem gleichhohen Turnmattenberg.",
               gold: "Wie Silber, aber Landung auf einem 20 cm höheren Turnmattenberg."
             },
             "16-17": {
-              variant: "Sprung mit Drehung (Turnmatten)",
+              variant: "Sprung mit Drehung",
+              short: "Springe gerade nach oben und drehe dich in der Luft.",
+              howTo: "Bei Bronze machst du vier Sprünge mit je halber Drehung (180°) im Wechsel: erster und dritter nach links, zweiter und vierter nach rechts. Bei Silber/Gold genügt EIN Sprung mit ganzer Drehung (360°). Bei Gold musst du auf beiden Füßen sicher landen.",
+              materials: "Turnmatten zur Landung",
+              tips: [
+                "Strecke die Arme bei der Drehung über den Kopf — das beschleunigt die Drehung.",
+                "Fixiere einen Punkt vor dir an („Spotting\") — das hilft gegen Schwindel.",
+                "Lande beidbeinig und federnd, nicht steif."
+              ],
               bronze: "Vier Strecksprünge mit je ½ Drehung in den sicheren Stand: erster und dritter nach links, zweiter und vierter nach rechts.",
               silber: "Ein Strecksprung mit 1/1 Drehung.",
               gold: "Ein Strecksprung mit 1/1 Drehung in den sicheren beidbeinigen Stand."
@@ -560,28 +656,56 @@ const DATA = {
           materials: "Koordinationsleiter (12 Sprossen, ca. 40 cm Abstand) oder Kreide-Markierung, Stoppuhr",
           values: {
             "10-11": {
-              variant: "Doppelschritt seitwärts (Hin & Rückweg)",
+              variant: "Doppelschritt seitwärts",
+              short: "Seitwärts durch die Leiter — 2 Kontakte pro Feld mit demselben Fuß.",
+              howTo: "Du stehst seitlich vor der Leiter. Beim Hinweg läufst du seitwärts hindurch und setzt in jedes Feld zwei Mal denselben Fuß. Am Ende drehst du dich und läufst zurück — diesmal führt der andere Fuß. Gemessen wird die Gesamtzeit beider Durchläufe.",
+              tips: [
+                "Bleib auf den Ballen — kleine, schnelle Schritte.",
+                "Sieh nicht ständig nach unten — entwickle Rhythmus.",
+                "Übe erst langsam, dann steigere das Tempo."
+              ],
               w: ["26,1", "22,7", "19,3"], m: ["26,1", "22,7", "19,3"],
               videos: [
                 { id: "kreLlChQw_o", title: "Doppelschritt seitwärts – Schrittfolge für 10–11 Jahre" }
               ]
             },
             "12-13": {
-              variant: "Ickey Shuffle (Hin & Rückweg)",
+              variant: "Ickey Shuffle",
+              short: "Diagonale Schrittfolge: innen – innen – außen.",
+              howTo: "Du startest leicht seitlich versetzt vor der Leiter und läufst vorwärts hindurch. Schrittmuster: ein Kontakt außen mit Fuß 1, dann zwei Kontakte (Fuß 2 + Fuß 1) im Feld, dann wieder außen mit Fuß 2. Das ergibt diagonal versetzt das Muster „innen – innen – außen\".",
+              tips: [
+                "Erst langsam die Schrittfolge lernen — sie ist tückisch.",
+                "Ein Fußwechsel ist NICHT erforderlich — du kannst nach der Wende mit demselben Fuß starten.",
+                "Schau dir das Video mehrmals an, dann wird das Muster klar."
+              ],
               w: ["29,2", "25,8", "22,4"], m: ["29,2", "25,8", "22,4"],
               videos: [
                 { id: "8aajoTCVw9E", title: "Ickey Shuffle – Schrittfolge für 12–13 Jahre" }
               ]
             },
             "14-15": {
-              variant: "3 plus 1 (Hin & Rückweg)",
+              variant: "3 plus 1",
+              short: "Drei Außenkontakte, dann ein Innenschritt — wiederholt.",
+              howTo: "Du läufst vorwärts durch die Leiter. Auf Höhe des ersten Feldes setzt du drei Kontakte außen neben der Leiter, dann einen Kontakt im Feld (innen). Das Muster wiederholt sich: außen – außen – außen – innen – außen – außen – außen – innen. Beim Rückweg muss ein Fußwechsel erfolgen.",
+              tips: [
+                "Rhythmus zählen hilft: 1-2-3-IN, 1-2-3-IN.",
+                "Schau dir das Video an — die Schrittfolge wird durch Bewegung klarer.",
+                "Bei der Wende: Fußwechsel nicht vergessen."
+              ],
               w: ["33,5", "30,1", "26,7"], m: ["33,5", "30,1", "26,7"],
               videos: [
                 { id: "PEDA2w6nkGw", title: "3 plus 1 – Schrittfolge für 14–15 Jahre" }
               ]
             },
             "16-17": {
-              variant: "Zwei-Zwei seitwärts (Hin & Rückweg)",
+              variant: "Zwei-Zwei seitwärts",
+              short: "Seitlich durch die Leiter — 2 Innenkontakte, 2 Außenkontakte im Wechsel.",
+              howTo: "Du startest seitwärts vor der Leiter. Im Wechsel: 2 Kontakte innen im Feld, dann 2 Kontakte rückversetzt außerhalb. Dabei führt immer derselbe Fuß. Beim Rückweg übernimmt automatisch der andere Fuß die Führung (andere Körperseite zur Leiter).",
+              tips: [
+                "Halt den Rhythmus: 2-innen-2-außen, das ist der Schlüssel.",
+                "Bleib seitwärts ausgerichtet — keine Vorwärtsdrehung der Hüfte.",
+                "Beim Rückweg führt automatisch der andere Fuß — kein extra Fußwechsel nötig."
+              ],
               w: ["33,2", "29,8", "26,4"], m: ["33,2", "29,8", "26,4"],
               videos: [
                 { id: "R59nUxu0jDI", title: "Zwei-Zwei seitwärts – Schrittfolge für 16–17 Jahre" }
